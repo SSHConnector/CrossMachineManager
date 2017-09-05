@@ -1,0 +1,23 @@
+﻿<Window x:Name="MyWindow" x:Class="CrossMachineManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrossMachineManager"
+        mc:Ignorable="d"
+        Title="Cross Platform Machine Manager" Height="500" Width="1000">
+    
+    <Grid>
+        <Button x:Name="OpenList" Content="Open Machine List" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" Width="114" Click="OpenList_Click"/>
+        <Button x:Name="SaveResults" Content="Save Results" HorizontalAlignment="Left" Margin="19,35,0,0" VerticalAlignment="Top" Width="114" Click="SaveResults_Click"/>
+        <Label x:Name="lbcommand" Content="Command:" HorizontalAlignment="Left" Margin="19,60,0,0" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="CommandTextBox" HorizontalAlignment="Left" Height="23" Margin="94,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="407"/>
+        <Button x:Name="RunButton" Content="Run" HorizontalAlignment="Left" Margin="520,60,0,0" VerticalAlignment="Top" Width="75" Click="RunButton_Click" Height="23"/>
+        <Label x:Name="lbuser" Content="User:" HorizontalAlignment="Left" Margin="156,7,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,0.538" Width="48"/>
+        <Label x:Name="lbpassword" Content="Password:" HorizontalAlignment="Left" Margin="154,32,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UserTextBox" HorizontalAlignment="Left" Height="23" Margin="221,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="221,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136"/>
+        <DataGrid x:Name="VMList" HorizontalAlignment="Left" Height="Auto" Margin="19,100,0,0" VerticalAlignment="Top" Width="Auto" RenderTransformOrigin="1.75,2.231" AutoGeneratingColumn="VMList_AutoGeneratingColumn"/>
+        <Button x:Name="uploadButton" Content="Upload file for all machines" HorizontalAlignment="Left" Margin="387,7,0,0" VerticalAlignment="Top" Width="208" Click="uploadButton_Click"/>
+    </Grid>
+</Window>
