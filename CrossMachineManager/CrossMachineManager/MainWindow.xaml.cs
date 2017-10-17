@@ -89,6 +89,10 @@ namespace CrossMachineManager
                     {
                         InvokeSSH ssh = new InvokeSSH(clientname, user, password);
                         item.CommandResult = ssh.Run(CommandTextBox.Text.Trim());
+                        if (!string.IsNullOrEmpty(ssh.ErrorMessage))
+                        {
+                            item.CommandResult = ssh.ErrorMessage;
+                        }
                     }
                     catch (Exception exca2)
                     {
